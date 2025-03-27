@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-y:hidden ;
+}
+
+body {
+    background-color: #1e1e1e; /* Darker background */
+    min-height: 100vh; /* Allow content to expand beyond viewport */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y:hidden ;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #121212;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Push content down to avoid overlap */
+.spacer {
+    height: 70px; /* Same height as navbar */
+    width: 100%;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4caf50;
+}
+
+/* CLOCK CONTAINER */
+.clock-container {
+    position: relative;
+    margin-top: 100px;
+    height: 320px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* AURA EFFECT - ONLY AT CIRCUMFERENCE */
+.aura {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: transparent;
+    border: 10px solid transparent;
+    border-top: 10px solid #4caf50;
+    border-right: 10px solid #2196f3;
+    border-bottom: 10px solid #e91e63;
+    border-left: 10px solid #ffeb3b;
+    animation: rotate 6s linear infinite;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+
+/* ROTATION ANIMATION */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CLOCK BOX */
+.box {
+    background-color: rgba(51, 24, 24, 0.295);
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(76, 175, 80, 0.8);
+    position: relative;
+    color: white;
+}
+
+/* DROPDOWN CONTAINER */
+.dropdown-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #4caf50;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+/* Styling on hover */
+select:hover {
+    border-color: #ffeb3b;
+}
+
+/* STOPWATCH CONTAINER */
+.stopwatch-container {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#stopwatch {
+    background-color: rgba(51, 24, 24, 0.295);
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clock-container {
+        height: 220px;
+        width: 220px;
+        margin-top: 100px;
+    }
+
+    .box {
+        height: 180px;
+        width: 180px;
+        font-size: 30px;
+    }
+
+    .aura {
+        width: 220px;
+        height: 220px;
+        border-width: 8px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .dropdown-container {
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    #stopwatch {
+        width: 150px;
+        height: 80px;
+        font-size: 24px;
+    }
+}

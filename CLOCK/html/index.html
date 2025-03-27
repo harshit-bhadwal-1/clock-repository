@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">My Clock</div>
+        <ul>
+            <li><a href="../html/index.html">Clock</a></li>
+            <li><a href="../html/timer.html">Timer</a></li>
+            <li><a href="../html/stopwatch.html">Stopwatch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Spacer to prevent content from overlapping -->
+    <div class="spacer"></div>
+
+    <!-- COUNTRY DROPDOWN -->
+    <div class="dropdown-container">
+        <label for="country">Select Country:</label>
+        <select id="country" onchange="updateClockWithTimezone()">
+            <option value="UTC">UTC (Default)</option>
+            <option value="America/New_York">New York, USA</option>
+            <option value="Europe/London">London, UK</option>
+            <option value="Asia/Tokyo">Tokyo, Japan</option>
+            <option value="Australia/Sydney">Sydney, Australia</option>
+            <option value="Asia/Kolkata">India (IST)</option>
+            <option value="Europe/Berlin">Berlin, Germany</option>
+        </select>
+    </div>
+
+    <!-- CLOCK WITH AURA -->
+    <div class="clock-container">
+        <div class="aura"></div>
+        <div class="box" id="clock">Loading...</div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

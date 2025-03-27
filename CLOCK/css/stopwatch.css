@@ -1,0 +1,28 @@
+/* STOPWATCH CONTROLS */
+.controls {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+/* Disabled button */
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}

@@ -1,0 +1,77 @@
+/* TIMER INPUT */
+.timer-input {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.timer-input label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.timer-input input {
+    padding: 12px 15px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #4caf50;
+    background-color: #333;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+.timer-input input:focus {
+    border-color: #ffeb3b;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+}
+
+/* TIMER BUTTONS */
+.btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-container button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Button hover and active effects */
+.btn-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-container button:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+    }
+
+    .timer-input input {
+        margin: 20px;
+        width: 100px;
+    }
+}

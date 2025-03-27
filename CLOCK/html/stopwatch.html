@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">My Clock</div>
+        <ul>
+            <li><a href="../html/index.html">Clock</a></li>
+            <li><a href="../html/timer.html">Timer</a></li>
+            <li><a href="../html/stopwatch.html">Stopwatch</a></li>
+        </ul>
+    </nav>
+    <!-- Spacer to prevent content from overlapping -->
+    <div class="spacer"></div>
+
+    <!-- STOPWATCH CONTAINER -->
+    <div class="clock-container">
+        <div class="aura"></div>
+        <div class="box" id="stopwatch">00:00:00</div>
+    </div>
+
+    <!-- STOPWATCH CONTROLS -->
+    <div class="controls">
+        <button id="startBtn" onclick="startStopwatch()">Start</button>
+        <button id="stopBtn" onclick="stopStopwatch()">Stop</button>
+        <button id="resetBtn" onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <script src="../js/stopwatch.js"></script>
+</body>
+
+</html>
